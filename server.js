@@ -12,7 +12,7 @@ function start(route) {
         response.end();
     }
     
-    http.createServer(onRequest).listen(8888);
+    http.createServer(onRequest).listen(process.env.VCAP_APP_PORT);
     console.log("Server startup complete");
 }
 
