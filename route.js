@@ -1,15 +1,10 @@
-var fs = require("fs");
-
-function route(response, pathname) {
+function route(pathname) {
+    var file = "";
     console.log("routing request for " + pathname);
-    response.writeHead(200, {"Content-Type" : "text/plain"});
     if (pathname == "/") {
-        fs.createReadStream('./index.html').pipe(response);
+        file = "./index.html";
     }
-    else{
-        response.write("no path");
-    }
-    response.end();
+    return file;
 }
 
 exports.route = route;
