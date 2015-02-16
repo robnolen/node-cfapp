@@ -7,20 +7,19 @@ var http   = require("http"),
 function start() {
 
     var router = Router();
-    var mount = st({ path: __dirname +'/static',
-                     url: '/',
+    console.log(__dirname);
+    var mount = st({ path: __dirname +'/static', 
+                     url: '/', 
                      index: 'index.html'});
 
     router.get('/', function(req, res) {
-        mount(req, res);
+        //mount(req, res);
     });
 
     var server = http.createServer(function(req, res) {
-        router(req, res, function() {});
+        router(req, res, function() { mount(req, res);});
     });
     server.listen(process.env.VCAP_APP_PORT);
-
-    
 }
 
 exports.start = start;
