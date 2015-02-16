@@ -7,12 +7,11 @@ var http   = require("http"),
 function start() {
 
     var router = Router();
+    var mount = st({ path: __dirname +'/static',
+                     url: '/',
+                     index: 'index.html'});
+
     router.get('/', function(req, res) {
-        var mount = st({ 
-                        path: './src/static', 
-                        url: '/', 
-                        index: 'index.html' 
-        });
         mount(req, res);
     });
 
