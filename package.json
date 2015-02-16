@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "Your Name",
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./src/index.js"
   },
   "dependencies": {
     "consolidate": "0.10.0",
