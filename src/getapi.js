@@ -16,6 +16,7 @@ exports.getapi = function(req, res) {
             var body = Buffer.concat(bodyChunks);
             res.writeHead(200,{"Content-Type" : "text/html"});
             res.write(body);
+            res.end();
         });
     });
 }
