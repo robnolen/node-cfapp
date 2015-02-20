@@ -2,19 +2,21 @@ doctype html
 html
     head
         link(href='css/bootstrap.min.css', rel='stylesheet' media='screen')
+    body
 
-h1 test output for jade/api retreival
 
-table
-    tr
-        th id
-        th title
-    each note in notes
-        tr
-            td #{note.id}
-            td #{note.title}
+        h1 test output for jade/api retreival
 
-script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-script(src='js/bootstrap.min.js')
+        table
+            tr
+                th id
+                th title
+            each note in notes
+                tr
+                    td #{note.id}
+                    td #{note.title}
+
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+        script(src='js/bootstrap.min.js')
     
 
