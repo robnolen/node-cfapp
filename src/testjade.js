@@ -1,5 +1,5 @@
 var jade = require('jade');
-var displayApi = require('./displayapi');
+var displayApi = require('./displayApi');
 exports.testjade = function (req, res) {
     var jade_opts = {"pretty" : true, "debug" : true};
     var jadeTemplate = __dirname + "/templates/test.jade";
